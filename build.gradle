@@ -7,13 +7,16 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url 'http://repo.spring.io/milestone'
+    }
 }
 
 configurations {
     all*.exclude group: 'commons-logging', module: 'commons-logging'
 }
 
-ext.springVersion = '4.1.6.RELEASE'
+ext.springVersion = '4.2.0.RC1'
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
